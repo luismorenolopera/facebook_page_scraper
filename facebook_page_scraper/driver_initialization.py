@@ -88,4 +88,5 @@ class Initializer:
     def init(self):
         """returns driver instance"""
         driver = self.set_driver_for_browser(self.browser_name)
+        self.__driver = driver
         return driver
