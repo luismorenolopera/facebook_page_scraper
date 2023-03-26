@@ -107,7 +107,7 @@ class Facebook_scraper:
             Utilities._Utilities__scroll_down(
                 self.__driver, self.__layout)  # scroll down
         # close the browser window after job is done.
-        Utilities._Utilities__close_driver(self.__driver)
+        self.__driver.quit()
         # dict trimming, might happen that we find more posts than it was asked, so just trim it
         self.__data_dict = dict(list(self.__data_dict.items())[
                                 0:int(self.posts_count)])
